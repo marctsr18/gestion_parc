@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
+    <head>
 
+    </body>
+<?php include 'nav.php' ?>
 <h2>Utilisateurs</h2>
 <?php
 
@@ -16,14 +17,14 @@ $bdd = new PDO("mysql:host=localhost;dbname=gestion_parc;port=3307","root","");/
 
 //requete à executer
 $sql = "SELECT * FROM utilisateur";
-//execution de la requete (appel de la methode query sur l'objet $)
 
+//execution de la requete (appel de la methode query sur l'objet $)
 $stmt=$bdd->query($sql);
 
 //liste des utilisateur
 $liste_utilisateurs = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
-//affichage des données
+//var_dump($liste_utilisateurs);
 //affichage des données
 foreach($liste_utilisateurs as $utilisateur){
     ?>
@@ -37,12 +38,12 @@ foreach($liste_utilisateurs as $utilisateur){
     
     //destruction de l'objet de connexion (libération de la mémoire)
     $bdd = null;
-    
-    ?>
-    </body>
-    </html>
-//var_dump($liste_utilisateurs);
+    //var_dump($liste_utilisateurs);
+    //destruction de l'objet de connection (libération de la memoire)
 
-//destruction de l'objet de connection (libération de la memoire)
-//$bdd = null;
-?>
+
+    ?>
+    
+
+
+

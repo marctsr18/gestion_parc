@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    
-</body>
-</html>
+
+<body >
+
+
+
+
+@keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+  <h1>test</h1>
+}
+
